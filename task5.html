@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <h1>Interface Admin </h1>
+    <div class="contain">
+    <input type="text" placeholder="nom et prénom" id="nom">
+    <input type="file" placeholder="choisir un fichier" id="photo">
+    <br>
+    <button id="b">poster</button>
+    <ul></ul></div>
+    
+</body>
+<script>
+    let l1=document.querySelector("#nom")
+    let l2=document.querySelector("#photo")
+    let liste=document.querySelector("ul")
+    let button=document.querySelector("button")
+    button.addEventListener("click", ajoutpost);
+    function ajoutpost(){
+        liste.innerHTML+=`<li><button onclick="supprime(this)" id="b1"> supprimer</button> ${l1.value} <img src=${l2.value}></li>`;  
+    }
+    input.addEventListener("keypress", function(event) {
+  
+    if (event.key === "Enter") {
+      event.preventDefault();
+      button.click();
+}})
+    function supprime(e){
+        e.parentElement.remove();
+
+    }
+    input.addEventListener("keypress", function(event) {
+  
+  if (event.key === "Enter") {
+   event.preventDefault();
+   button.click();
+ }})
+    
+
+</script>
+</html>
